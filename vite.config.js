@@ -2,11 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// عدّل هذا المسار إذا كان اسم مستودع GitHub Pages مختلفًا
-// مثال: إذا كان الرابط github.com/username/arabic-font-lab
-// اترك القيمة '/arabic-font-lab/'
-// إذا كنت تنشر على Netlify/Vercel أو دومين خاص، اجعلها '/'
-const BASE_PATH = process.env.VITE_BASE_PATH || '/arabic-font-lab/';
+// المسار النسبي './' يجعل المشروع يعمل تلقائيًا مهما كان اسم مستودع GitHub Pages
+// أو المسار الفرعي الذي يُنشر عليه (لا حاجة لتعديل أي شيء يدويًا).
+// إذا كنت تنشر على دومين مخصص من الجذر مباشرة، يمكنك أيضًا تركه './' فهو يعمل في كل الحالات.
+const BASE_PATH = process.env.VITE_BASE_PATH || './';
 
 export default defineConfig({
   base: BASE_PATH,
