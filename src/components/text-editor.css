@@ -1,0 +1,36 @@
+.editor-block {
+  margin: 18px 0;
+}
+
+.editor-block__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.editor-block__textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 64px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: var(--font-body);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color .15s ease;
+}
+
+.editor-block__textarea:focus {
+  border-color: var(--accent);
+}
+
+.editor-block__hint {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: end;
+}

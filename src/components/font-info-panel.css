@@ -1,0 +1,75 @@
+.font-info {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin: 18px 0;
+}
+
+.font-info__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.font-info__name {
+  margin: 0;
+  font-size: 18px;
+  font-family: var(--font-mono);
+}
+
+.font-info__arabic {
+  margin: 2px 0 0;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.font-info__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.font-info__tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-raised);
+  color: var(--accent-strong);
+}
+
+.font-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.font-info__grid dt {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 2px;
+}
+
+.font-info__grid dd {
+  margin: 0;
+  font-size: 14px;
+}
+
+.font-info__grid a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.font-info__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 520px) {
+  .font-info__grid { grid-template-columns: 1fr; }
+}

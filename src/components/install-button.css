@@ -1,0 +1,31 @@
+.install-btn {
+  position: fixed;
+  bottom: 20px;
+  inset-inline: 0;
+  margin-inline: auto;
+  width: max-content;
+  z-index: 50;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--brass-400), var(--brass-600));
+  color: var(--ink-950);
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: var(--shadow-2);
+  animation: install-pop .3s ease;
+}
+
+@keyframes install-pop {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+  .install-btn {
+    inset-inline: auto;
+    inset-inline-end: 28px;
+    margin-inline: 0;
+  }
+}

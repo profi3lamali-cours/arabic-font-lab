@@ -1,0 +1,33 @@
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 0 24px;
+  margin-top: 60px;
+}
+
+.site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.site-footer__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin: 0;
+}
+
+.site-footer__desc {
+  margin: 2px 0 0;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.site-footer__copy {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  margin: 22px 0 0;
+  direction: ltr;
+}

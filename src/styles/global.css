@@ -1,0 +1,138 @@
+/* =========================================================
+   Arabic Font Lab — Design tokens
+   الهوية: "حبر وذهب" — مستوحاة من المخطوطات المذهّبة والحبر
+   وأطباق الخزف الإسلامي (الفيروزي) كلون ثانٍ.
+   ========================================================= */
+
+:root {
+  /* -- ألوان: الوضع الليلي (الافتراضي) -- */
+  --ink-950: #0F0D0B;
+  --ink-900: #14110E;
+  --ink-800: #1C1712;
+  --ink-700: #262019;
+  --ink-600: #3A3125;
+  --paper-100: #EDE6D8;
+  --paper-050: #F6F1E7;
+  --brass-500: #C9A24B;
+  --brass-400: #DDBB6E;
+  --brass-600: #A8822F;
+  --teal-500: #2E7D6B;
+  --teal-400: #46A08C;
+  --danger: #C1543C;
+
+  --bg: var(--ink-900);
+  --surface: var(--ink-800);
+  --surface-raised: var(--ink-700);
+  --border: var(--ink-600);
+  --text: var(--paper-100);
+  --text-dim: #B8AE9C;
+  --accent: var(--brass-500);
+  --accent-strong: var(--brass-400);
+  --accent-2: var(--teal-500);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-2: 0 8px 24px rgba(0,0,0,0.35);
+
+  --font-display: 'Reem Kufi', 'Cairo', sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+  --font-mono: 'Cascadia Mono', ui-monospace, monospace;
+
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: var(--paper-050);
+  --surface: #FFFFFF;
+  --surface-raised: #FBF7EE;
+  --border: #E1D7C0;
+  --text: #221C13;
+  --text-dim: #6B6152;
+  --accent: var(--brass-600);
+  --accent-strong: var(--brass-500);
+  --accent-2: var(--teal-500);
+  --shadow-1: 0 1px 2px rgba(50,40,20,0.08);
+  --shadow-2: 0 10px 30px rgba(50,40,20,0.12);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a { color: inherit; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink-950);
+}
+
+/* حركة أقل عند طلب المستخدم ذلك */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* تركيز واضح بلوحة المفاتيح لإتاحة الوصول */
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tagline {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 15px;
+  margin: 22px 0 0;
+}
+
+main {
+  padding-bottom: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* شريط تمرير رفيع متناسق مع الهوية */
+* { scrollbar-width: thin; scrollbar-color: var(--accent) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: var(--accent); }
